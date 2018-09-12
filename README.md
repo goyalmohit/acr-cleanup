@@ -32,6 +32,3 @@ In this case, script will delete the docker images older than 30 days for every 
 .\acr-cleanup.ps1 -ServicePrincipalId db27d2f6-b339-4918-856f-ca0e5c8d0ab5 -ServicePrincipalPass 67cc2733-69c9-46ee-b4d2-d679ceaf77ed -ServicePrincipalTenant fc334bf1-d9f9-4880-85a3-404c7c479c91 -AzureRegistryName my-azure-registry
 
 In this case, script will delete the docker images older than 30 days for every repo in the provided container registry.
-
-# Authors
-Mohit Goyal
