@@ -7,7 +7,7 @@ These instructions will allow you to run the PowerShell script. This script can 
 ## Prerequisites
 * You need an Azure Service Principal Account with key to authenticate to Azure Container Registry.
 * You need to have Azure CLI and PowerShell installed on the machine, where you are running the script
-* This script works on the assumption that build numbers are based on $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)   (https://docs.microsoft.com/en-us/azure/devops/pipelines/build/options?view=vsts&tabs=yaml). Basically, of above, the mandory part is _$(Date:yyyyMMdd)$(Rev:.r) in build number format.
+* This script works on the assumption that docker images tags based on $(SomeName)_$(Date:yyyyMMdd)$(Rev:.r)  
 
 ## Parameters
 * ServicePrincipalId - This is a required parameter. You need to provide service principal account id for this.
