@@ -87,7 +87,7 @@ for($index=2; $index -lt $RepoList.length; $index++){
         foreach($tag in $RepositoryTags){
             if($RepositoryTags.IndexOf($tag) -ge $NoOfKeptImages){
                 $ImageName = $RepositoryName + ":" + $tag
-                Remove-Image -registryName $RepositoryName -imageName $ImageName -dryRun $DryRun
+                Remove-Image -registryName $AzureRegistryName -imageName $ImageName -dryRun $DryRun
             }
         }
     }
@@ -106,7 +106,7 @@ for($index=2; $index -lt $RepoList.length; $index++){
             $ImageName = $RepositoryName + ":" + $tag
 
             if($RepositoryTagBuildDay -lt $((Get-Date).AddDays(-$NoOfDays))){
-                Remove-Image -registryName $RepositoryName -imageName $ImageName -dryRun $DryRun
+                Remove-Image -registryName $AzureRegistryName -imageName $ImageName -dryRun $DryRun
             }        
             else{
                 Write-Host "Skipping image: $ImageName"
