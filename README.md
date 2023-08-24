@@ -39,3 +39,17 @@ In this case, script will delete the docker images older than 30 days for every 
 .\acr-cleanup.ps1 -ServicePrincipalId db27d2f6-b339-4918-856f-ca0e5c8d0ab5 -ServicePrincipalPass 67cc2733-69c9-46ee-b4d2-d679ceaf77ed -ServicePrincipalTenant fc334bf1-d9f9-4880-85a3-404c7c479c91 -AzureRegistryName my-azure-registry -NoOfKeptImages 5
 
 In this case, script will keep the 5 most recent docker images for every repo in the provided container registry.  Each repo will have no more than 5 images after executing.
+
+## Execute Docker
+```bash
+docker run \
+    -e ServicePrincipalTenant=<value> \
+    -e ServicePrincipalId=<value> \
+    -e ServicePrincipalPass=<value> \
+    -e SubscriptionName=<value> \
+    -e AzureRegistryName=<value> \
+    -e NoOfDays=30 \
+    -e NoOfKeptImages=5 \
+    -e DryRun=true \
+    <nome_da_imagem_docker>
+```
